@@ -27,14 +27,14 @@ test:
     - tests
   imports:
     - aiorwlock
-  commands:
-    - pip check
-    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
-    - pytest -v tests
   requires:
     - pip
     - pytest
     - pytest-asyncio
+  commands:
+    - pip check
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
+    - pytest -v tests
 
 about:
   home: https://github.com/aio-libs/aiorwlock
